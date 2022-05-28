@@ -396,7 +396,7 @@ p {
 }
 
 /*styling af skrift til øverste del af kalderen*/
-.month ul li {
+.month > ul > li {
   color: white;
   font-size: 20px;
   text-transform: uppercase;
@@ -404,13 +404,13 @@ p {
 }
 
 /*pil til venstre*/
-.month .prev {
+.month > .prev {
   float: left;
   padding-top: 10px;
 }
 
 /*pil til højre*/
-.month .next {
+.month > .next {
   float: right;
   padding-top: 10px;
 }
