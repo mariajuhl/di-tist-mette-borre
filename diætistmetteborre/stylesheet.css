@@ -1,0 +1,673 @@
+
+/*Generelle hjemmeside regler - indhold udfylder hele hjemmesiden og samme skrifttype til hele siden*/
+* {
+  margin: 0;
+  padding: 0;    
+  box-sizing: border-box;
+  font-family: interstate,sans-serif;
+}
+
+/*------------------------------------------ Header og navigationsbar ------------------------------------------*/
+
+/*Sticky header, der "sidder fast" i vinduet mens man ruller ned på siden*/
+header {
+    align-items: center;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    position:sticky;
+    display: flex;
+    background-color: white;
+}
+
+header > .navigationsbar {
+    display: flex;
+    font-size: 17pt;
+    font-weight: 100;
+    position: absolute;
+    right: 15px;
+    align-items: center;
+}
+
+header > .navigationsbar > .dropdown > .dropdown-button > a{
+    color: black;
+    margin-right: 50px;
+}
+
+
+
+
+/*------------------------------------------ Forside ------------------------------------------*/
+
+/*Hero sektion*/
+#forside-hero {
+    background-image: url(images/forside-hero.jpg);
+    background-size:cover;
+    display: block;
+}
+
+#forside-hero > div > h2 {
+    padding-top: 15%;
+    padding-bottom: 20%;
+    padding-left: 35%;
+    font-size: 6vw;
+    right:0px;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+}
+
+/*Animation til herotekst*/
+.fadeUp {
+  animation: fadeUp 1.2s both;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Behandlinger*/
+.cards {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+
+.cards > div {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px;
+    width:300px;
+    box-shadow:  2px 2px 10px rgba(0, 0, 0, 0.479);
+    text-align: center;
+    padding-top: 40px;
+}
+
+.cards > div > p {
+  color: white;
+  font-weight: 500;
+  text-shadow: 2px 2px 10px black;
+  padding-bottom: 20px;
+ }
+
+/*Billeder til forskellige "behandlinger"*/
+
+#card-1 {
+    background-image: url(images/cøliaki.jpg);
+}
+
+#card-2 {
+   background-image: url(images/irritabel-tyktarm.jpg);
+}
+
+#card-3 {
+    background-image: url(images/crohns-sygdom.jpg);
+}
+
+#card-4 {
+   background-image: url(images/stomi.jpg);
+}
+
+#card-5 {
+    background-image: url(images/colitis-ulcerosa.jpg);
+}
+
+#card-6 {
+   background-image: url(images/low-fodmap-diet.jpg);
+}
+
+/*------------------------------------------ Om ------------------------------------------*/
+
+/*Flexbox af 2 "kasser" så de står ved siden af hinanden*/
+
+.two-boxes {
+    display: flex;
+    justify-content:center;
+}
+
+.two-boxes > :last-child > img {
+    padding-bottom: 15%;
+    flex-direction: column;
+}
+
+.green-link {
+  color: #6db264;
+}
+
+/*Grøn cirkel med tekst*/
+
+.green-circle {
+    background-color: #6db264;
+    width: 400px;
+    height: 400px;
+    margin-top: 200px;
+    border-radius: 200px;
+    overflow:auto;
+    margin: auto;
+    box-shadow: 1px 1px 20px  rgba(0, 0, 0, 0.466);
+}
+
+.green-circle > p {
+    width: 320px;
+    text-align: center;
+    margin:auto;
+    color: white;
+    padding-top:95px;
+}
+
+.hero-text {
+  color: rgb(93, 93, 93);
+  font-weight: 200;
+  padding-top: 125px;
+  padding-bottom: 150px;
+}
+
+
+/*----------------------------------- Kontakt ----------------------------------- */
+
+#kontaktoplysninger {
+    padding-top: 100px;
+}
+
+
+.kontaktoplysninger > div > img{
+    max-width:40px;
+    display: inline-block;
+}
+
+.kontaktoplysninger > div {
+display: flex;
+padding-bottom: 10px;
+}
+
+.kontaktoplysninger {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+/*Henvendelse funktion*/
+input[type=text], select, textarea {
+    width: 70%;
+    padding: 12px;
+    box-sizing:border-box;
+    border-color: #6db264;
+    border-style: solid;
+    border-width: 0.3px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/*Knap til send besked*/
+input[type=submit] {
+    background-color:#6db264;
+    color:#f1f1f1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Design af den "store" kasse til hendvelse-funktion*/
+.container {
+    background-color:#f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Design af tekst i kasserne til henvendelse-funktion*/
+label {
+    color: #878787;
+    font-size: 20px;
+}
+
+#findvej {
+  padding-top: 100px;
+  margin: auto;
+}
+
+
+/*------------------------------------------ Footer ------------------------------------------*/
+
+footer {
+  background-color:#f1f1f1;
+  padding-top: 70px;
+  margin-top:  100px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+footer > section {
+  display: flex;
+  align-items: center; 
+}
+
+/*Vertical grøn line*/
+.vertical {
+  border-left: 1px solid #6db264;
+  height: 20px;
+}
+
+/*Flexbox af tre "kasser" så de står på linje*/
+.three-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.three-boxes > p {
+  padding: 15px;
+}
+
+footer > p {
+    padding-top:25px;
+}
+
+/*--------------------------------- Error ------------------------------ */
+
+.error {
+  padding-top: 15%;
+}
+
+/*------------------------------------------ Generelle regler ------------------------------------------*/
+
+/*centrering af indhold*/
+.centrering {
+  text-align: center;
+  width: 40%;
+}
+
+/*Horisontal grøn linje*/
+.green-line {
+    border-color: #6db264;
+    width: 150px;
+    margin: auto;
+    margin-top:50px;
+    margin-bottom: 50px;
+    border-style:solid;
+    text-decoration-thickness: 2;
+}
+
+/*Kortere horisontal grøn linje - brugt til sektion med "behandlinger"*/
+
+.short-green-line {
+    border-color: #6db264;
+    width: 50px;
+    border-style: solid;
+    margin: auto;
+}
+
+/*Grøn boks til "læs mere"-knapper og book tid*/
+.green-box {
+    padding: 15px 20px 15px 20px;
+    background-color:#6db264;
+    color: white;
+    border-radius: 10px;
+    font-weight: 200;
+}
+
+/*Linje under ALLE links - tyndere og mere luft*/
+a {
+  text-underline-offset:5px;
+  text-decoration-thickness: 1px;
+}
+
+/*Smooth scrool når man klikker på et link, som linker til en sektion på siden*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/*Grå boks til sektioner med tekststykke og overskrift*/
+.grey-box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-weight: 100;
+    font-size: 15pt;
+}
+
+.grey-box > h1 {
+    max-width: 90%;
+    margin:auto;
+}
+
+/*Bredde på alt indhold UNDER hero sectioner, så der kommer whitespace i siderne */
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+/*Skrift typer*/
+h1 {
+    font-size: 65pt;
+    font-weight: 200;
+    color: #969696;
+    text-align: center;
+}
+
+h2 {
+    font-size: 70pt;
+    font-weight: bold;
+}
+
+p {
+    font-size: 17pt;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+/*------------------------------Book tid------------------------------------*/
+
+/*Hero billede på alle sider (undtagen forside), som er transperant og position:absolute, så tekst kan så over billedet*/
+.hero-photo{
+  opacity: 0.3;
+  width: 100%;
+  position: absolute;
+}
+
+/*placering af kalderen*/
+.calender {
+  padding-top: 50px;
+}
+
+/*styling af øverste del af kalderen, hvor der står "juni 2022"*/
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #6db264;
+  text-align: center;
+}
+
+/*styling af skrift til øverste del af kalderen*/
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/*pil til venstre*/
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/*pil til højre*/
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/*Miderste del af kalderen hvor ugedagene står -> baggrundsfarve samt størrelse på "kassen"*/
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+/*Miderste del af kalderen hvor ugedagene står -> placering af tekst ved siden af hinanden samt afstand mellem dem.*/
+.weekdays > li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/*Nederste dal af kalderen -> baggrundsfarve og størrelse på "kassen"*/
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+  margin-bottom: 100px;
+}
+
+/*Nederste dal af kalderen --> placering af text i "kassen" */
+.days > li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:17px;
+  color: #777;
+}
+
+/*Nederste dal af kalderen --> Styling af datoer*/
+.days > li > a {
+  padding: 5px;
+  text-decoration: none;
+  color: rgb(83, 83, 83);
+}
+
+/*Gør datoen grøn, når markøren køre over den*/
+.days > li > a:hover{
+  background-color: #6db264;
+}
+
+/*Gør datoen grøn, når man klikker på den*/
+.days > li > a:focus {
+  background-color: #6db264;
+}
+
+.book-tid {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  }
+  
+/*--------------------------Mobil version-------------------------------*/
+
+@media only screen and (max-width:768px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .grey-box > p {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 50px;
+  }
+
+  .grey-box {
+    margin-top: 50px;
+  }
+
+  .three-boxes {
+    flex-direction: column;
+  }
+
+  .three-boxes > p {
+    width:100%;
+    text-align: center;
+  }
+
+  #three-boxes > div:nth-of-type(2) {
+    flex-direction: column-reverse;
+  }
+
+  header > .navigationsbar{
+    display: none;
+  }
+
+  footer > p {
+    font-size: 15px;
+    padding-top:40px;
+  }
+
+  footer > .three-boxes > p {
+    font-size: 17px;
+    padding:5px;
+  }
+
+  footer > .three-boxes > .vertical {
+    display: none;
+  }
+
+  /*Burgermenu*/
+
+  .burgermenu {
+    position: absolute;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  #burger-icon {
+    width:50px;
+    padding-right: 10px;
+  }
+
+  .burgermenu > .dropdown-content > a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 15pt;
+    font-weight: 150;
+  }
+  
+  /*Styling af "underlinks" i navigationbaren */
+   .burgermenu > .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(187, 187, 187);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 0;
+    right: 0;
+    width: 400px;
+  }
+
+  /*Styling af "underlinks" når markøren bevæges over linket*/
+  .burgermenu >.dropdown-content > a:hover {
+    background-color: lightgrey;
+  }
+  
+  /*Gør "underlinks"/dropdown synlig */
+  .burgermenu:active >  .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content:hover {
+    display: block;
+  }
+
+  .burgermenu > .dropdown-content > .green-box {
+    border-radius: 0px;
+  }
+
+  .hero-text {
+  padding-top: 35px;
+  padding-bottom: 40px;
+  }
+
+  .coloumn-reverse {
+    flex-direction: column-reverse;
+  }
+
+ .two-boxes > .books {
+    display: flex;
+  }
+
+  .two-boxes > :last-child > img {
+    width: 120px;
+    margin: auto;
+  }
+
+  .coloumn-reverse > div > p {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 50px;
+  }
+
+  #findvej {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:768px) {
+.grey-box > p{
+  padding: 0% 20% 5% 20%;
+}
+
+#three-boxes > hr {
+    display: none;
+  }
+
+  .burgermenu {
+    display: none;
+  }
+
+  /*Styling af links i navigationsbar*/
+.dropdown-content > a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 15pt;
+}
+
+/*Styling af "underlinks" i navigationbaren */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:rgb(187, 187, 187);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*Styling af "underlinks" når markøren bevæges over linket*/
+.dropdown-content > a:hover {
+  background-color: lightgrey;
+}
+
+/*Gør "underlinks"/dropdown synlig */
+.dropdown:hover > .dropdown-content {
+  display: block;
+}
+
+.two-boxes > .books > img {
+  width: 170px;
+  margin-left: 10%;
+}
+
+#findvej {
+  width: 50%;
+}
+
+#three-boxes > div:nth-of-type(2) {
+  padding-top: 50px;
+}
+
+#three-boxes > div:nth-of-type(3) {
+  padding-top: 50px;
+}
+
+}
+
